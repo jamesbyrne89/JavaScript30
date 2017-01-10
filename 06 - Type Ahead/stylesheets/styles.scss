@@ -13,8 +13,8 @@
 
     body {
             background: url('../images/maps-bg-large.jpg');
-      background-size: cover;
-      width: 100%;
+      background-size: 100%;
+      max-width: 100%;
     }
 
     *, *:before, *:after {
@@ -28,7 +28,9 @@
 
     .search-form {
       max-width:500px;
-      margin:100px auto;
+      top: 100px;
+      position: relative;
+      margin: auto;
     }
 
     input.search {
@@ -48,21 +50,24 @@
 
 
     .suggestions {
-      margin: 100px 0;
+      margin-top: 100px;
       padding: 0;
       position: relative;
       background: transparent;
+      overflow-y: auto;
+      max-height: 585px;
+      border-radius: 3px;
       /*perspective:20px;*/
     }
     .suggestions li {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.9);
       list-style: none;
       border-bottom: 1px solid #fff;
       margin:0;
       padding:20px;
       transition:background 0.2s;
       display:flex;
-      color: #3B454F ;
+      color: #484848 ;
       justify-content:space-between;
       text-transform: capitalize;
     }
@@ -78,7 +83,7 @@
     }
 
     .highlight {
-      background:#549C89;
+      background:#fd5c63;
       color: #fff;
     }
 
